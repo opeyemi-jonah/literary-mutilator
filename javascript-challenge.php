@@ -70,12 +70,12 @@
 		return Math.floor(Math.random() * Math.floor(max));
 	}
 
-//Change color event listener with a mouse over event
+//Change color event listener with a mouseover event
 firstParagraph.addEventListener('mouseover', event=> {
 	/* A deep-dive coders inspiration
 	Assigned random numbers to variables and then convert them to string for easy compilation in method*/
 	let red = getRandomInt(30).toString()
-	let green = getRandomInt(300).toString()
+	let green = getRandomInt(30).toString()
 	let blue = getRandomInt(30).toString()
 	let rgb = '#' + red + green + blue;
 
@@ -84,13 +84,42 @@ firstParagraph.addEventListener('mouseover', event=> {
 	firstParagraph.style.backgroundColor = rgb;
 });
 
-	//change font color
+	//change font style
 secondParagraph.addEventListener('click', event=>{
 	secondParagraph.style.fontFamily = "\"Comic Sans MS\", cursive, sans-serif"
 
 
 });
 
+
+//ROT13 function
+	function rot(letter){
+		//everything that is non alphabetical
+		let symbolRegEx = /[^a-z,A-z]/g;
+
+		if (symbolRegEx.test(letter)){
+			return letter;
+		}
+
+		let asciiCode = letter.charCodeAt();
+
+		if (asciiCode > 77){
+			asciiCode -=13;
+		}
+		else {
+			asciiCode +=13;
+		}
+
+		return String.fromCharCode(asciiCode);
+	}
+
+thirdParagraph.addEventListener('click', e=>{
+
+	thirdParagraph.innerHTML = thirdParagraph.innerHTML.split("").map(rot).join("");
+	return thirdParagraph.innerHTML;
+
+
+});
 
 
 
