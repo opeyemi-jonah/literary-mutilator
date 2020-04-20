@@ -19,12 +19,15 @@
 </p>
 </div>
 
-<p id="2">
+<div id="2" draggable="true" ondragstart="drag(ev)">
+<p >
 	Shrimp tacos are tasty tacos! Say taco one more time. Carne asada on corn tortillas. Burritos are very tasty.
 	Side of rice and beans, please. Can you put some peppers and onions on that? Josh’s taco shack is the best taco shack.
 	Say taco one more time. Tacos for breakfast, lunch and dinner. Side of rice and beans, please. Tacos, tacos, tacos.
 	Pico de gallo, on the side please. Fish tacos with cabbage slaw and a side of chips and guac.
 </p>
+</div>
+
 
 <p id ='3'>
 	It is a long established fact that a reader will be distracted by the readable content of a page when looking at its
@@ -35,7 +38,14 @@
 </p>
 
 
+<form>
+	<label for="text"></label><textarea type="text" id="text">
+	
+</form>
+
 <p><div id="result"></div></p>
+
+
 
 
 <script>
@@ -63,15 +73,19 @@
 	let secondParagraph = document.getElementById("2");
 	let thirdParagraph = document.getElementById("3");
 
+
+	//generate random numbers for my color codes
 	function getRandomInt(max) {
 		return Math.floor(Math.random() * Math.floor(max));
 	}
 
-//Change color
-firstParagraph.addEventListener('click', event=> {
-	let red = getRandomInt(3).toString(16)
-	let green = getRandomInt(3).toString(16)
-	let blue = getRandomInt(3).toString(16)
+//Change color event listener with a mouse over event
+firstParagraph.addEventListener('mouseover', event=> {
+	/* A deep-dive coders inspiration
+	Assigned random numbers to variables and then convert them to string for easy compilation in method*/
+	let red = getRandomInt(30).toString(16)
+	let green = getRandomInt(300).toString(16)
+	let blue = getRandomInt(30).toString(16)
 	let rgb = '#' + red + green + blue;
 
 	console.log(event.target);
@@ -79,20 +93,24 @@ firstParagraph.addEventListener('click', event=> {
 	firstParagraph.style.backgroundColor = rgb;
 });
 
+	//change font color
+secondParagraph.addEventListener('click', event=>{
+	secondParagraph.style.fontFamily = "\"Comic Sans MS\", cursive, sans-serif"
 
 
+});
 
-	function rotEncrypt() {
-let pOne = document.getElementById('1');
-console.log(pOne.innerText);
-let i;
-for (i=0; i<pOne.length;i++){
-
-
-}
-
-
+//Html5 drag and drop
+	function drag(e) {
+		e.preventDefault();
+		e.dataTransfer.setData("text", e.target.id);
 	}
+	function drop(e) {
+		e.preventDefault();
+		var data = ev.dataTransfer.getData("text");
+		e.target.appendChild(document.getElementById(data));
+	}
+
 
 
 
