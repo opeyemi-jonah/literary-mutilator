@@ -99,10 +99,12 @@ secondParagraph.addEventListener('click', event=>{
 		for (let i=0;i<str.length;i++){
 
 			let asciiNum = str[i].charCodeAt();
+			//ascii code for uppercase and lowercase A-M
 			if (asciiNum >=65 && asciiNum <=77 || asciiNum >=97 && asciiNum <= 109){
 				solve += String.fromCharCode(asciiNum + 13)
 			}
 
+				//ascii code for uppercase N-Z and lowercase n-z
 			else if(asciiNum >=78 && asciiNum <=90 || asciiNum >=110 && asciiNum <= 122) {
 
 				solve += String.fromCharCode(asciiNum - 13)
