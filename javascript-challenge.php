@@ -109,6 +109,8 @@ secondParagraph.addEventListener('click', event=>{
 
 				solve += String.fromCharCode(asciiNum - 13)
 			}
+
+			//append those not within range as is to str
 			else {
 				solve += str[i];
 			}
