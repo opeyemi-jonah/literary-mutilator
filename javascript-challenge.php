@@ -1,17 +1,23 @@
-<html>
+<!DOCTYPE html>
+
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport"
 			content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>javaScript Challenge</title>
+	<link rel="stylesheet" href="./style/style.css">
 </head>
-<body onload="rotEncrypt()">
 
-<p id = '1'>
+<body onload="request()">
+
+<div id="divOne">
+<p>
 	Shields up. I recommend we transfer power to phasers and arm the photon torpedoes. Something strange on the detector
 	circuit. The weapons must have disrupted our communicators. You saw something as tasty as meat, but inorganically materialized out of patterns used by our transporters. Captain, the most elementary and valuable statement in science, the beginning of wisdom, is 'I do not know.' All transporters off.
 </p>
+</div>
 
 <p id="2">
 	Shrimp tacos are tasty tacos! Say taco one more time. Carne asada on corn tortillas. Burritos are very tasty.
@@ -30,6 +36,8 @@
 
 
 <p><div id="result"></div></p>
+
+
 <script>
 	function request(){
 		fetch('https://jsonplaceholder.typicode.com/todos/1')
@@ -40,12 +48,38 @@
 
 			console.log(response);
 			let result = document.getElementById("result");
-			result.innerHTML = "userId: "+response.userId+"<br>"+"id: "+response.id+"<br>"+"title: "+response.title+"<br>"+
+			result.innerHTML += "userId: "+response.userId+"<br>"+"id: "+response.id+"<br>"+"title: "+response.title+"<br>"+
 				"completed: "+response.completed;
+
 		});
 
 
 	}
+
+
+
+	let firstParagraph = document.getElementById("divOne");
+
+	let secondParagraph = document.getElementById("2");
+	let thirdParagraph = document.getElementById("3");
+
+	function getRandomInt(max) {
+		return Math.floor(Math.random() * Math.floor(max));
+	}
+
+
+firstParagraph.addEventListener('click', event=> {
+	let red = getRandomInt(3).toString(16)
+	let green = getRandomInt(3).toString(16)
+	let blue = getRandomInt(3).toString(16)
+	let rgb = '#' + red + green + blue;
+
+	console.log(event.target);
+	console.log(event.type);
+	firstParagraph.style.backgroundColor = rgb;
+});
+
+
 
 
 	function rotEncrypt() {
