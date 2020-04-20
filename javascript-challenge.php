@@ -67,7 +67,7 @@
 		return Math.floor(Math.random() * Math.floor(max));
 	}
 
-
+//Change color
 firstParagraph.addEventListener('click', event=> {
 	let red = getRandomInt(3).toString(16)
 	let green = getRandomInt(3).toString(16)
