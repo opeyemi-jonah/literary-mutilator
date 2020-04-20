@@ -19,15 +19,12 @@
 </p>
 </div>
 
-<div id="2" draggable="true" ondragstart="drag(ev)">
-<p >
+<p id="2">
 	Shrimp tacos are tasty tacos! Say taco one more time. Carne asada on corn tortillas. Burritos are very tasty.
 	Side of rice and beans, please. Can you put some peppers and onions on that? Josh’s taco shack is the best taco shack.
 	Say taco one more time. Tacos for breakfast, lunch and dinner. Side of rice and beans, please. Tacos, tacos, tacos.
 	Pico de gallo, on the side please. Fish tacos with cabbage slaw and a side of chips and guac.
 </p>
-</div>
-
 
 <p id ='3'>
 	It is a long established fact that a reader will be distracted by the readable content of a page when looking at its
@@ -36,12 +33,6 @@
 	now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in
 	their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)
 </p>
-
-
-<form>
-	<label for="text"></label><textarea type="text" id="text">
-	
-</form>
 
 <p><div id="result"></div></p>
 
@@ -83,9 +74,9 @@
 firstParagraph.addEventListener('mouseover', event=> {
 	/* A deep-dive coders inspiration
 	Assigned random numbers to variables and then convert them to string for easy compilation in method*/
-	let red = getRandomInt(30).toString(16)
-	let green = getRandomInt(300).toString(16)
-	let blue = getRandomInt(30).toString(16)
+	let red = getRandomInt(30).toString()
+	let green = getRandomInt(300).toString()
+	let blue = getRandomInt(30).toString()
 	let rgb = '#' + red + green + blue;
 
 	console.log(event.target);
@@ -100,16 +91,7 @@ secondParagraph.addEventListener('click', event=>{
 
 });
 
-//Html5 drag and drop
-	function drag(e) {
-		e.preventDefault();
-		e.dataTransfer.setData("text", e.target.id);
-	}
-	function drop(e) {
-		e.preventDefault();
-		var data = ev.dataTransfer.getData("text");
-		e.target.appendChild(document.getElementById(data));
-	}
+
 
 
 
