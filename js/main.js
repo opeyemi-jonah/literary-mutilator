@@ -95,8 +95,11 @@ thirdParagraph.addEventListener('click', e=>{
 secondParagraph.addEventListener('click', e=>{
 
 	let look = secondParagraph.innerHTML;
+
+	//regular expression to search globally for "breakfast"
 	let change = look.replace(/breakfast/g, "dinner of life");
 
+	//replacing the look variable with variable change as the new html content
 	secondParagraph.innerHTML = change;
 
 });
