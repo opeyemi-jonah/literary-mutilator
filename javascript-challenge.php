@@ -34,7 +34,14 @@
 	their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)
 </p>
 
+
 <p><div id="result"></div></p>
+
+<form action="post">
+	<input type="text" name="name" placeholder="Name">
+	<br>
+	<button type="button" class="btn">Button</button>
+</form>
 
 <script src="js/main.js"></script>
 

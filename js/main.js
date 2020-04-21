@@ -104,3 +104,10 @@ secondParagraph.addEventListener('click', e=>{
 
 });
 
+
+ thirdParagraph.addEventListener('dblclick', ev=>{
+
+let
+
+ });
+
