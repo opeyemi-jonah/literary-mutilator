@@ -95,7 +95,7 @@ thirdParagraph.addEventListener('click', e=>{
 secondParagraph.addEventListener('click', e=>{
 
 	let look = secondParagraph.innerHTML;
-	let change = look.replace(/amet/g, "Amen, Father");
+	let change = look.replace(/breakfast/g, "dinner of life");
 
 	secondParagraph.innerHTML = change;
 
