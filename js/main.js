@@ -90,3 +90,15 @@ thirdParagraph.addEventListener('click', e=>{
 
 });
 
+//find and replace function
+
+secondParagraph.addEventListener('click', e=>{
+
+	let look = secondParagraph.innerHTML;
+	let change = look.replace(/amet/g, "Amen, Father");
+
+	secondParagraph.innerHTML = change;
+
+
+});
+
