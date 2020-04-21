@@ -1,8 +1,13 @@
+
+//getting data from JSON placeholder and posting
+
 function request(){
 	fetch('https://jsonplaceholder.typicode.com/todos/1')
 		.then(function(response) {
+
 			return response.json()
 		})
+
 		.then((response)=> {
 
 			console.log(response);
@@ -27,9 +32,10 @@ function getRandomInt(max) {
 }
 
 //Change color event listener with a mouseover event
+
 firstParagraph.addEventListener('mouseover', event=> {
 	/* A deep-dive coders inspiration
-	Assigned random numbers to variables and then convert them to string for easy compilation in method*/
+	Assigned random numbers to variables */
 	let red = getRandomInt(10)
 	let green = getRandomInt(10)
 	let blue = getRandomInt(10)
