@@ -99,6 +99,5 @@ secondParagraph.addEventListener('click', e=>{
 
 	secondParagraph.innerHTML = change;
 
-
 });
 
