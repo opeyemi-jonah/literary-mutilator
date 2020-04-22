@@ -38,7 +38,7 @@
 <p><div id="result"></div></p>
 
 <form action="post">
-	<input type="text" name="name" placeholder="Name">
+	<input id="input" type="text" name="name" placeholder="Name">
 	<br>
 	<button type="button" class="btn">Button</button>
 </form>

@@ -107,7 +107,15 @@ secondParagraph.addEventListener('click', e=>{
 
  thirdParagraph.addEventListener('dblclick', ev=>{
 
-let
+
 
  });
 
+//keyboard reaction
+let keyReact = document.getElementById("input");
+keyReact.addEventListener('keypress', e=>{
+
+	console.log(e.type);
+
+
+});
