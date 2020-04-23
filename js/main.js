@@ -46,7 +46,7 @@ firstParagraph.addEventListener('mouseover', event=> {
 	firstParagraph.style.backgroundColor = rgb;
 });
 
-//change font style
+//change font style using a CLICK event
 secondParagraph.addEventListener('click', event=>{
 	secondParagraph.style.fontFamily = "\"Comic Sans MS\", cursive, sans-serif"
 
@@ -81,7 +81,7 @@ function rot(str){
 	return solve;
 }
 
-
+//ROT13 using a CLICK EVENT
 thirdParagraph.addEventListener('click', e=>{
 
 	thirdParagraph.innerHTML = thirdParagraph.innerHTML.split("").map(rot).join("");
@@ -90,7 +90,7 @@ thirdParagraph.addEventListener('click', e=>{
 
 });
 
-//find and replace function
+//find and replace function USING A CLICK EVENT
 
 secondParagraph.addEventListener('click', e=>{
 
@@ -105,7 +105,7 @@ secondParagraph.addEventListener('click', e=>{
 });
 
 
-//keyboard reaction
+//KEYBOARD REACTION
 let keyReact = document.getElementById("input");
 keyReact.addEventListener('keypress', e=>{
 
@@ -114,4 +114,9 @@ keyReact.addEventListener('keypress', e=>{
 
 });
 
-//
+//shuffle
+thirdParagraph.addEventListener("click",e=>{
+
+
+
+})
